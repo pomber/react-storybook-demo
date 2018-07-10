@@ -1,3 +1,5 @@
+> Try ForkBox by forking this project at https://forkbox.co/f/forkboxlabs/react-storybook-demo
+
 ## Simple React/Redux Todo App
 
 This app setup has the support for [React Storybook](https://github.com/kadirahq/react-storybook). It allows to develop and test React UI components rapidly.
