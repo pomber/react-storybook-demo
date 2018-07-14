@@ -28,11 +28,12 @@ ENV FORKBOX_COMMAND STORYBOOK
 
 RUN echo $'\
 #!/bin/bash \n\
+git pull \n\
 echo "FORKBOX_COMMAND has the value: $FORKBOX_COMMAND" \n\
 case "$FORKBOX_COMMAND" in \n\
  TERMINAL) gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh ;; \n\
  STORYBOOK) yarn storybook ;; \n\
- TESTS) yarn test:watch ;; \n\ 
+ TESTS) gotty --permit-write --reconnect yarn test:watch ;; \n\ 
  *) gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh ;; \n\
 esac \n\
 ' > ~/start.sh && chmod +x ~/start.sh
