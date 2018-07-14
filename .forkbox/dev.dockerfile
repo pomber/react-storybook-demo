@@ -24,7 +24,7 @@ WORKDIR /repo
 RUN git clone -b ${BRANCH_NAME} --single-branch ${REPO_URL} .
 RUN yarn
 
-ENV FORKBOX_COMMAND TERMINAL
+ENV FORKBOX_COMMAND STORYBOOK
 
 RUN echo $'\
 #!/bin/bash \n\
