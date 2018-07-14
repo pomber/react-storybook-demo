@@ -24,4 +24,10 @@ WORKDIR /repo
 RUN git clone -b ${BRANCH_NAME} --single-branch ${REPO_URL} .
 RUN yarn
 
-CMD (watch -n 3 git pull &>/dev/null &) && gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh
+
+RUN echo $'\
+#!/bin/bash \n\
+gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh \n\
+' > ~/start.sh
+
+CMD (watch -n 3 git pull &>/dev/null &) && ~/start.sh
