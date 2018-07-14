@@ -28,6 +28,6 @@ RUN yarn
 RUN echo $'\
 #!/bin/bash \n\
 gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh \n\
-' > ~/start.sh
+' > ~/start.sh && chmod +x ~/start.sh
 
 CMD (watch -n 3 git pull &>/dev/null &) && ~/start.sh
