@@ -27,7 +27,12 @@ RUN yarn
 
 RUN echo $'\
 #!/bin/bash \n\
-gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh \n\
+echo "FORKBOX_COMMAND has the value: $FORKBOX_COMMAND" \n\
+case "$FORKBOX_COMMAND" in \n\
+ TERMINAL) gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh ;; \n\
+ STORYBOOK) yarn storybook ;; \n\
+ TESTS) yarn test:watch ;; \n\
+esac \n\
 ' > ~/start.sh && chmod +x ~/start.sh
 
 CMD (watch -n 3 git pull &>/dev/null &) && ~/start.sh
