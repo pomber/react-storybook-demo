@@ -1,1 +1,7 @@
-{}
+{
+  "commands": [
+    { "name": "Terminal" },
+    { "name": "Storybook" },
+    { "name": "Watch Tests" }
+  ]
+}
