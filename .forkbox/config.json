@@ -1,7 +1,7 @@
 {
   "commands": [
-    { "name": "Terminal" },
-    { "name": "Storybook" },
-    { "name": "Watch Tests" }
+    { "name": "Terminal", "env": { "FORKBOX_COMMAND": "TERMINAL" } },
+    { "name": "Storybook", "env": { "FORKBOX_COMMAND": "STORYBOOK" } },
+    { "name": "Watch Tests", "env": { "FORKBOX_COMMAND": "TESTS" } }
   ]
 }
