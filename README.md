@@ -1,4 +1,5 @@
-> Try ForkBox by forking this project at https://forkbox.co/f/forkboxlabs/react-storybook-demo
+Try ForkBox by forking this project at:
+# https://forkbox.co/f/forkboxlabs/react-storybook-demo
 
 ## Simple React/Redux Todo App
 
