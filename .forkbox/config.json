@@ -2,6 +2,7 @@
   "commands": [
     { "name": "Launch Terminal", "env": { "FORKBOX_COMMAND": "TERMINAL" } },
     { "name": "Run Storybook", "env": { "FORKBOX_COMMAND": "STORYBOOK" } },
-    { "name": "Watch Tests", "env": { "FORKBOX_COMMAND": "TESTS" } }
+    { "name": "Watch Tests", "env": { "FORKBOX_COMMAND": "TESTS" } },
+    { "name": "Start App", "env": { "FORKBOX_COMMAND": "START" } }
   ]
 }
