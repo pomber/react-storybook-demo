@@ -34,6 +34,7 @@ case "$FORKBOX_COMMAND" in \n\
  TERMINAL) gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh ;; \n\
  STORYBOOK) yarn storybook ;; \n\
  TESTS) gotty --permit-write --reconnect yarn test:watch ;; \n\ 
+ START) yarn start ;; \n\ 
  *) gotty --permit-write --reconnect --title-format "ForkBox Terminal" /bin/sh ;; \n\
 esac \n\
 ' > ~/start.sh && chmod +x ~/start.sh
