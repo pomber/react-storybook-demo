@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     const { todos, actions } = this.props
     return (
-      <div style={{color: "red"}}>
+      <div>
         <Header addTodo={actions.addTodo} />
         <MainSection todos={todos} actions={actions} />
       </div>
